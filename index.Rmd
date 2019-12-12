@@ -1,0 +1,17 @@
+---
+title: "TBEP references"
+output: 
+  html_document
+bibliography: bibs.bib
+urlcolor: blue
+csl: stylefile.csl
+link-citations: true
+nocite: '@*'
+---
+  
+```{r, message = F, warning = F, echo = F}
+library(tbeptools)
+path <- 'tbep-refs.csv'
+bibs <- anlz_refs(path)
+writeLines(bibs, 'bibs.bib')
+```
