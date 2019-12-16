@@ -12,7 +12,10 @@ nocite: '@*'
 ```{r, message = F, warning = F, echo = F}
 library(googlesheets4)
 library(tbeptools)
-path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit#gid=0'
+
+options(gargle_oauth_email = "mbeck@tbep.org")
+
+path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit?usp=sharing'
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht)
 names(sht)[1] <- 'index'
