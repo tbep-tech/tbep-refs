@@ -7,5 +7,3 @@ Imports:
   tbeptools
 Remotes: 
   tbep-tech/tbeptools
-Suggests:
-  sodium
