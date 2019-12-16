@@ -10,8 +10,12 @@ nocite: '@*'
 ---
   
 ```{r, message = F, warning = F, echo = F}
+library(googlesheets4)
 library(tbeptools)
-path <- 'tbep-refs.csv'
-bibs <- anlz_refs(path)
+path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit#gid=0'
+sht <- read_sheet(path) 
+sht <- as.data.frame(sht)
+names(sht)[1] <- 'index'
+bibs <- anlz_refs(sht)
 writeLines(bibs, 'bibs.bib')
 ```
