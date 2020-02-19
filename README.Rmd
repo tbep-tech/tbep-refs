@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+# README
+
+[![Travis build status](https://travis-ci.org/tbep-tech/tbep-refs.svg?branch=master)](https://travis-ci.org/tbep-tech/tbep-refs)
+
+Master references file for TBEP
+
+Top 100 words in titles from TBEP publications: 
+
+```{r, echo = F, fig.height = 4, fig.width = 8, message = F, warning = F}
+library(googlesheets4)
+library(tbeptools)
+library(tidyverse)
+library(wordcloud)
+library(RColorBrewer)
+library(tm)
+
+options(gargle_oauth_email = "mbeck@tbep.org")
+
+path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit?usp=sharing'
+sht <- read_sheet(path) 
+sht <- as.data.frame(sht) 
+
+wrds <- sht %>% 
+  pull(title) %>% 
+  paste(collapse = ' ') %>% 
+  gsub('Tampa|Bay', '', .) %>% 
+  strsplit(' ')
+
+docs <- Corpus(VectorSource(wrds))
+docs <- docs %>%
+  tm_map(removeNumbers) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
+docs <- tm_map(docs, content_transformer(tolower))
+docs <- tm_map(docs, removeWords, stopwords("english"))
+
+
+dtm <- TermDocumentMatrix(docs) 
+matrix <- as.matrix(dtm) 
+words <- sort(rowSums(matrix),decreasing=TRUE) 
+df <- data.frame(word = names(words),freq=words)
+
+wordcloud(words = df$word, freq = df$freq, min.freq = 1,  scale=c(2.5,0.25), max.words=100, random.order=FALSE, rot.per=0.35, colors=brewer.pal(8, "Dark2"))
+
+```
+
