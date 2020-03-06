@@ -11,6 +11,7 @@ nocite: '@*'
   
 ```{r, message = F, warning = F, echo = F}
 library(googlesheets4)
+library(dplyr)
 library(tbeptools)
 # devtools::load_all('../tbeptools')
 
@@ -20,6 +21,8 @@ path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCz
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht)
 names(sht)[1] <- 'index'
+shtsv <- mutate_all(sht, as.character)
+write.csv(shtsv, 'tbep-refs.csv', row.names = F)
 bibs <- anlz_refs(sht)
 writeLines(bibs, 'bibs.bib')
 ```
