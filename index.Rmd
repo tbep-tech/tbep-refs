@@ -15,7 +15,10 @@ library(dplyr)
 library(tbeptools)
 # devtools::load_all('../tbeptools')
 
-options(gargle_oauth_email = "mbeck@tbep.org")
+# options(gargle_oauth_email = "mbeck@tbep.org")
+
+# run gs4 in a deathorized state for travis build
+gs4_deauth()
 
 path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit?usp=sharing'
 sht <- read_sheet(path) 
