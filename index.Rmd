@@ -29,3 +29,5 @@ write.csv(shtsv, 'tbep-refs.csv', row.names = F)
 bibs <- anlz_refs(sht)
 writeLines(bibs, 'bibs.bib')
 ```
+
+Created `r Sys.Date()`
