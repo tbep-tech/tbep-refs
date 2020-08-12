@@ -23,9 +23,6 @@ gs4_deauth()
 path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit?usp=sharing'
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht)
-names(sht)[1] <- 'index'
-shtsv <- mutate_all(sht, as.character)
-write.csv(shtsv, 'tbep-refs.csv', row.names = F)
 bibs <- anlz_refs(sht)
 writeLines(bibs, 'bibs.bib')
 ```
