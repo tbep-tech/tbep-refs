@@ -3,7 +3,7 @@ on:
     branches:
       - master
 
-name: Render README
+name: Render README and index
 
 jobs:
   render:
@@ -23,7 +23,6 @@ jobs:
         shell: Rscript {0}
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
-        run: Rscript -e 'rmarkdown::render("index.Rmd")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
