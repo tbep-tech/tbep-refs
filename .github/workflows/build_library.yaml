@@ -2,8 +2,6 @@ on:
   push:
     paths:
       - index.Rmd
-  schedule:
-    - cron: "*/5 * * * *"
       
 name: Build library
 
