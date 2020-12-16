@@ -4,7 +4,7 @@ output: github_document
 
 # README
 
-![Render Rmarkdown](https://github.com/tbep-tech/tbep-refs/workflows/Render%20Rmarkdown/badge.svg)
+[![Render Rmarkdown](https://github.com/tbep-tech/tbep-refs/workflows/Render%20Rmarkdown/badge.svg)](https://github.com/tbep-tech/tbep-refs/actions)
 
 Master references file for TBEP
 
@@ -35,7 +35,7 @@ wrds <- sht %>%
 docs <- Corpus(VectorSource(wrds))
 docs <- docs %>%
   tm_map(removeNumbers) %>%
-  tm_map(removePunctuation) %>%
+    tm_map(removePunctuation) %>%
   tm_map(stripWhitespace)
 docs <- tm_map(docs, content_transformer(tolower))
 docs <- tm_map(docs, removeWords, stopwords("english"))
