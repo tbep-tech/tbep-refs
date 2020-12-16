@@ -1,8 +1,8 @@
 
 # README
 
-[![Travis build
-status](https://travis-ci.org/tbep-tech/tbep-refs.svg?branch=master)](https://travis-ci.org/tbep-tech/tbep-refs)
+![Render
+Rmarkdown](https://github.com/tbep-tech/tbep-refs/workflows/Render%20Rmarkdown/badge.svg)
 
 Master references file for TBEP
 
