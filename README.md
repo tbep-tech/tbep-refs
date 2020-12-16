@@ -1,8 +1,8 @@
 
 # README
 
-![Render
-Rmarkdown](https://github.com/tbep-tech/tbep-refs/workflows/Render%20Rmarkdown/badge.svg)
+[![Render
+Rmarkdown](https://github.com/tbep-tech/tbep-refs/workflows/Render%20Rmarkdown/badge.svg)](https://github.com/tbep-tech/tbep-refs/actions)
 
 Master references file for TBEP
 
