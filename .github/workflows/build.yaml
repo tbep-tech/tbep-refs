@@ -5,11 +5,11 @@ on:
   schedule:
     - cron: "0 12 * * *"
 
-name: Render Rmarkdown
+name: build
 
 jobs:
   render:
-    name: Render Rmarkdown
+    name: build
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
