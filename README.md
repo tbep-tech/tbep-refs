@@ -1,7 +1,7 @@
 
 # README
 
-[![build](https://github.com/tbep-tech/tbep-refs/workflows/biuld/badge.svg)](https://github.com/tbep-tech/tbep-refs/actions)
+[![build](https://github.com/tbep-tech/tbep-refs/workflows/build/badge.svg)](https://github.com/tbep-tech/tbep-refs/actions)
 
 Master references file for TBEP
 
