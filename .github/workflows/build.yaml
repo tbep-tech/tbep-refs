@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install cairo for fonts
+        run: brew install cairo
       - name: Install rmarkdown, remotes, and the local package
         run: |
           install.packages(c("remotes", "googlesheets4", "tm", "tidyverse", "wordcloud", "RColorBrewer", "dplyr"))
