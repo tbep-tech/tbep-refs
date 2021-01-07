@@ -27,4 +27,4 @@ bibs <- anlz_refs(sht)
 writeLines(bibs, 'bibs.bib')
 ```
 
-Created `r Sys.Date()`
+Created `r Sys.Date()`, .bib file [here](https://github.com/tbep-tech/tbep-refs/blob/master/bibs.bib)
