@@ -21,6 +21,7 @@ jobs:
         run: |
           brew install cairo
           brew install gdal
+          brew install udunits
       - name: Install rmarkdown, remotes, and the local package
         run: |
           install.packages(c("remotes", "googlesheets4", "tm", "tidyverse", "wordcloud", "RColorBrewer", "dplyr"))
