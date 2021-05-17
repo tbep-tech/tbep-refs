@@ -19,6 +19,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install macOS dependencies
         run: |
+          rm -rf /usr/local/bin/gfortran
           brew install cairo
           brew install gdal
           brew install udunits
