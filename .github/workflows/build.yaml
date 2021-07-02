@@ -27,7 +27,8 @@ jobs:
         run: |
           install.packages(c("remotes", "googlesheets4", "tm", "tidyverse", "wordcloud", "RColorBrewer", "dplyr"))
           remotes::install_cran("rmarkdown")
-          remotes::install_github('tbep-tech/tbeptools')
+          remotes::install_version('sf', version = '0.9-8')
+          install.packages('tbeptools', repos = 'https://fawda123.r-universe.dev')
         shell: Rscript {0}
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
