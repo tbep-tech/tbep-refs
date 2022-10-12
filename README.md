@@ -3,7 +3,7 @@
 
 [![build](https://github.com/tbep-tech/tbep-refs/workflows/build/badge.svg)](https://github.com/tbep-tech/tbep-refs/actions)
 
-Master references file for TBEP
+Master references file for TBEP library and educational materials
 
 Top 100 words in titles from TBEP publications:
 

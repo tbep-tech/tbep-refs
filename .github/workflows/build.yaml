@@ -30,8 +30,9 @@ jobs:
           sudo apt-get install libproj-dev
       - name: Install R packages
         run: |
-          install.packages(c("remotes", "googlesheets4", "tm", "tidyverse", "wordcloud", "RColorBrewer", "dplyr"))
-          remotes::install_github('tbep-tech/tbeptools')
+          install.packages(c("remotes", "googlesheets4", "tm", "dplyr", "wordcloud", "RColorBrewer"))
+          options(repos = c(fawda123 = 'https://fawda123.r-universe.dev', CRAN = 'https://cloud.r-project.org'))
+          install.packages("tbeptools")
         shell: Rscript {0}
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'

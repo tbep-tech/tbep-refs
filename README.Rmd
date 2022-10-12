@@ -13,7 +13,7 @@ Top 100 words in titles from TBEP publications:
 ```{r, echo = F, fig.height = 4, fig.width = 8, message = F, warning = F}
 library(googlesheets4)
 library(tbeptools)
-library(tidyverse)
+library(dplyr)
 library(wordcloud)
 library(RColorBrewer)
 library(tm)
