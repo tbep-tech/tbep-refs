@@ -39,6 +39,8 @@ jobs:
             RColorBrewer
             rmarkdown
             tbep-tech/tbeptools
+          needs: |
+            Rcampdf
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
       - name: Render index
