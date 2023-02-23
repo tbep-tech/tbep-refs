@@ -30,15 +30,15 @@ jobs:
           sudo apt-get install libproj-dev
       - name: Setup R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
-          with: 
-            packages: |
-              googlesheets4
-              tm
-              dplyr
-              wordcloud
-              RColorBrewer
-              rmarkdown
-              tbep-tech/tbeptools
+        with: 
+          packages: |
+            googlesheets4
+            tm
+            dplyr
+            wordcloud
+            RColorBrewer
+            rmarkdown
+            tbep-tech/tbeptools
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
       - name: Render index
