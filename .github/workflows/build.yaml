@@ -32,13 +32,13 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with: 
           packages: |
-            googlesheets4
-            tm
-            dplyr
-            wordcloud
-            RColorBrewer
-            rmarkdown
-            tbep-tech/tbeptools
+            any::googlesheets4
+            any::tm
+            any::dplyr
+            any::wordcloud
+            any::RColorBrewer
+            any::rmarkdown
+            github::tbep-tech/tbeptools
           needs: |
             Rcampdf
       - name: Render README
