@@ -8,9 +8,8 @@ educational materials.
 
 Formatted bibliographies:
 
-  - [Technical publications](https://tbep-tech.github.io/tbep-refs/)
-  - [Education
-    materials](https://tbep-tech.github.io/tbep-refs/eduindex)
+- [Technical publications](https://tbep-tech.github.io/tbep-refs/)
+- [Education materials](https://tbep-tech.github.io/tbep-refs/eduindex)
 
 Top 100 words in titles from TBEP publications:
 
