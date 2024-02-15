@@ -24,6 +24,7 @@ path <- 'https://docs.google.com/spreadsheets/d/18fJHXYDmD4AF6I7t3lfu42nKDHZKNwt
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht)
 sht$number <- NA
+sht$misc <- NA
 edubibs <- anlz_refs(sht)
 writeLines(edubibs, 'edubibs.bib')
 ```
