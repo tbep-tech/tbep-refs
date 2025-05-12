@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v2
         with: 
-          extra-repositories: 'https://fawda123.r-universe.dev' 
+          extra-repositories: 'https://tbep-tech.r-universe.dev' 
       - uses: r-lib/actions/setup-pandoc@v2
       - name: Setup Ubuntu dependencies
         run: |
@@ -27,6 +27,7 @@ jobs:
       - name: Setup R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with: 
+          pak-version: "devel"
           packages: |
             any::googlesheets4
             any::tm
