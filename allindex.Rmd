@@ -1,0 +1,30 @@
+---
+title: "TBEP references: technical and educational"
+output: 
+  html_document
+bibliography: allbibs.bib
+urlcolor: blue
+csl: stylefile.csl
+link-citations: true
+nocite: '@*'
+---
+  
+```{r, message = F, warning = F, echo = F}
+library(googlesheets4)
+library(dplyr)
+library(tbeptools)
+# devtools::load_all('../tbeptools')
+
+# options(gargle_oauth_email = "mbeck@tbep.org")
+
+# run gs4 in a deathorized state for travis build
+gs4_deauth()
+
+path <- 'https://docs.google.com/spreadsheets/d/1qLW3ZNDxRVQ6Wq3-hHzkTaKwJxJutzBYyR94yKzbYc8/edit?usp=sharing'
+sht <- read_sheet(path) 
+sht <- as.data.frame(sht)
+bibs <- anlz_refs(sht)
+writeLines(bibs, 'allbibs.bib')
+```
+
+Created `r Sys.Date()`, .bib file [here](https://github.com/tbep-tech/tbep-refs/blob/master/allbibs.bib)

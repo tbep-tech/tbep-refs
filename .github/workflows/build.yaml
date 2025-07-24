@@ -36,10 +36,12 @@ jobs:
             tbeptools
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
-      - name: Render index
+      - name: Render technical index
         run: Rscript -e 'rmarkdown::render("index.Rmd")'
       - name: Render education index
         run: Rscript -e 'rmarkdown::render("eduindex.Rmd")'
+      - name: Render all index
+        run: Rscript -e 'rmarkdown::render("allindex.Rmd")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"

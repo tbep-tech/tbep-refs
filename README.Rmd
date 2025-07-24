@@ -10,10 +10,11 @@ Master references file for TBEP technical publications library and educational m
 
 Formatted bibliographies:
 
-* [Technical publications](https://tbep-tech.github.io/tbep-refs/)
-* [Education materials](https://tbep-tech.github.io/tbep-refs/eduindex)
+* [All publications](https://tbep-tech.github.io/tbep-refs/allindex)
+* [Technical publications only](https://tbep-tech.github.io/tbep-refs/)
+* [Education materials only](https://tbep-tech.github.io/tbep-refs/eduindex)
 
-Top 100 words in titles from TBEP publications: 
+Top 100 words in titles from all TBEP publications: 
 
 ```{r, echo = F, fig.height = 4, fig.width = 8, message = F, warning = F}
 library(googlesheets4)
@@ -27,7 +28,7 @@ library(tm)
 # run gs4 in a deathorized state for build
 gs4_deauth()
 
-path <- 'https://docs.google.com/spreadsheets/d/1VvEFlD_dRhp26HeOMz-CyZ5ZG9szMCziBBcniCwrUJg/edit?usp=sharing'
+path <- 'https://docs.google.com/spreadsheets/d/1qLW3ZNDxRVQ6Wq3-hHzkTaKwJxJutzBYyR94yKzbYc8/edit?usp=sharing'
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht) 
 
