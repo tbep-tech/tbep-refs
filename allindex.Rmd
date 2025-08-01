@@ -12,7 +12,7 @@ nocite: '@*'
 ```{r, message = F, warning = F, echo = F}
 library(googlesheets4)
 library(dplyr)
-library(tbeptools)
+# library(tbeptools)
 # devtools::load_all('../tbeptools')
 
 # options(gargle_oauth_email = "mbeck@tbep.org")
@@ -23,7 +23,7 @@ gs4_deauth()
 path <- 'https://docs.google.com/spreadsheets/d/1qLW3ZNDxRVQ6Wq3-hHzkTaKwJxJutzBYyR94yKzbYc8/edit?usp=sharing'
 sht <- read_sheet(path) 
 sht <- as.data.frame(sht)
-bibs <- anlz_refs(sht)
+bibs <- tbeptools::anlz_refs(sht)
 writeLines(bibs, 'allbibs.bib')
 ```
 

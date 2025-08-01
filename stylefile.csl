@@ -35,7 +35,7 @@
   <macro name="publisher">
     <group delimiter=", ">
       <choose>
-        <if type="report thesis" match="any">
+        <if type="thesis" match="any">
           <text variable="genre"/>
         </if>
       </choose>
@@ -83,6 +83,23 @@
       </else>
     </choose>
   </macro>
+  <macro name="report-details">
+    <choose>
+      <if type="report">
+        <group delimiter=" ">
+          <choose>
+            <if variable="genre">
+              <text variable="genre"/>
+            </if>
+            <else>
+              <text value="Technical report"/>
+            </else>
+          </choose>
+          <text variable="number" prefix="#"/>
+        </group>
+      </if>
+    </choose>
+  </macro>
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
@@ -103,7 +120,7 @@
         <if type="bill book graphic legal_case motion_picture report song" match="any">
           <group prefix=", " delimiter=", ">
             <text macro="edition"/>
-            <text variable="number" prefix="Technical report #"/>
+            <text macro="report-details"/>
             <text macro="publisher"/>
           </group>
         </if>
