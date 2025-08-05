@@ -6,8 +6,14 @@
 Master references file for TBEP technical publications library and
 educational materials.
 
-Formatted bibliography
+Formatted technical and education bibliography
 [here](https://tbep-tech.github.io/tbep-refs/allindex).
+
+Formatted technical bibliography
+[here](https://tbep-tech.github.io/tbep-refs/techindex).
+
+Formatted education bibliography
+[here](https://tbep-tech.github.io/tbep-refs/eduindex).
 
 Top 100 words in titles from all TBEP publications:
 
