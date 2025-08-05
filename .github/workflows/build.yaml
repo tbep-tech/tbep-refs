@@ -38,6 +38,10 @@ jobs:
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
       - name: Render all index
         run: Rscript -e 'rmarkdown::render("allindex.Rmd")'
+      - name: Render technical index
+        run: Rscript -e 'rmarkdown::render("techindex.Rmd")'
+      - name: Render education index
+        run: Rscript -e 'rmarkdown::render("eduindex.Rmd")'        
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
